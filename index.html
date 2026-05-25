@@ -217,6 +217,45 @@ main{max-width:900px;margin:0 auto;padding:80px 48px 120px}
 }
 .note-card strong{display:block;font-size:12px;letter-spacing:1px;font-weight:500;color:var(--ink);margin-bottom:4px;text-transform:uppercase}
 
+/* ALERT */
+.tl-alert{
+  margin-top:4px;padding:10px 14px 10px 36px;
+  border-radius:8px;font-size:12.5px;line-height:1.65;
+  position:relative;
+}
+.tl-alert::before{position:absolute;left:12px;top:10px;font-size:14px}
+.tl-alert-warn{background:#fdf3e7;color:#7a4a10;border:1px solid #f0d5a0}
+.tl-alert-warn::before{content:'⚠️'}
+.tl-alert-info{background:#e8f4fb;color:#1a5276;border:1px solid #aed6f1}
+.tl-alert-info::before{content:'ℹ️'}
+
+/* HOTEL CARDS */
+.hotel-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+.hotel-card{
+  padding:12px 14px;border-radius:8px;
+  border:1px solid var(--cream-dark);background:var(--white);
+  font-size:13px;
+}
+.hotel-card-name{font-weight:500;color:var(--ink);margin-bottom:3px}
+.hotel-card-detail{color:var(--ink-light);font-size:12px;line-height:1.6}
+.hotel-card-price{color:var(--teal);font-weight:500;font-size:12px;margin-top:4px}
+@media(max-width:640px){.hotel-row{grid-template-columns:1fr}}
+
+/* STEP LIST */
+.step-list{margin:8px 0 0 0;padding:0;list-style:none}
+.step-list li{
+  display:flex;align-items:baseline;gap:10px;
+  padding:5px 0;font-size:13px;color:var(--ink-mid);
+  border-bottom:1px dashed var(--cream-dark);
+}
+.step-list li:last-child{border-bottom:none}
+.step-num{
+  flex-shrink:0;width:20px;height:20px;border-radius:50%;
+  background:var(--ink);color:#fff;
+  font-size:10px;font-weight:500;
+  display:flex;align-items:center;justify-content:center;
+}
+
 /* FOOTER */
 footer{
   text-align:center;padding:48px 24px;
@@ -295,13 +334,27 @@ footer{
         <div class="tl-spot">
           <div class="tl-time">13:00</div>
           <div class="tl-name">關西機場降落・取租車</div>
-          <div class="tl-note">通關取行李後約 13:00 取車，建議提前預訂含導航車款</div>
+          <div class="tl-note">租車為整趟行程（8天），關西機場取車、關西機場還車。取車櫃台在 <strong>Aeroplaza（航空廣場）</strong>，從第1航廈走2樓連通道步行約3分鐘。</div>
+          <ul class="step-list">
+            <li><span class="step-num">1</span>入境審查（約 20～30 分）</li>
+            <li><span class="step-num">2</span>領行李（約 10～15 分）</li>
+            <li><span class="step-num">3</span>走2樓連通道往 Aeroplaza（約 3 分）</li>
+            <li><span class="step-num">4</span>找租車公司櫃台辦手續，出示護照＋駕照＋譯本（約 15～20 分）</li>
+            <li><span class="step-num">5</span>職員把車開到門口，確認車況後出發</li>
+          </ul>
+          <div class="tl-alert tl-alert-warn" style="margin-top:10px">
+            取車必備文件：台灣駕照正本＋<strong>日文譯本</strong>（兩張缺一不可）＋護照＋信用卡（押金）<br>
+            日文譯本需至監理站申請，費用約 NT$100，出發前務必辦好
+          </div>
+          <div class="tl-alert tl-alert-info" style="margin-top:6px">
+            建議加租 <strong>ETC 卡</strong>，高速公路全程都用得到。離開機場需過關西空港連絡橋，收費 940 日圓，ETC 卡自動扣款，還車時一併結算。
+          </div>
         </div>
       </div>
       <div class="tl-item">
         <div class="tl-drive">
           <span class="drive-icon">🚗</span>
-          <span>開車往長濱（名神高速）</span>
+          <span>關西空港連絡橋 → 阪神高速湾岸線 → 名神高速 → 長浜IC（約 90km）</span>
           <span class="drive-dur">約 1.5h</span>
         </div>
       </div>
@@ -309,24 +362,45 @@ footer{
         <div class="tl-spot">
           <div class="tl-time">15:00</div>
           <div class="tl-name">長濱老街・黑壁廣場</div>
-          <div class="tl-note">玻璃工藝老街，隨意散步，長輩輕鬆步行</div>
+          <div class="tl-note">玻璃工藝老街，隨意散步，長輩輕鬆步行。長濱位於琵琶湖北岸湖畔，老街距離湖邊步行約 5 分鐘。</div>
         </div>
       </div>
       <div class="tl-item">
         <div class="tl-spot">
           <div class="tl-time">17:00</div>
           <div class="tl-name">Check in 旅館</div>
-          <div class="tl-note">長濱或彥根，建議預訂琵琶湖景旅館</div>
+          <div class="tl-note">選 A 方案：住湖畔旅館，早起看晨景散步後再出發，才對得起「琵琶湖」這一站</div>
+          <div class="hotel-row">
+            <div class="hotel-card" style="border-color:var(--teal);grid-column:1/-1">
+              <div class="hotel-card-name">⭐ グランドメルキュール琵琶湖リゾート＆スパ</div>
+              <div class="hotel-card-detail">
+                全客室琵琶湖景・有「長浜太閤溫泉」（露天風呂）・停車場有<br>
+                JR 長浜駅徒步 10 分｜2024年4月リブランドOPEN<br>
+                じゃらん「泊まってよかった宿大賞 2024」得獎
+              </div>
+              <div class="hotel-card-price">
+                4人・2室・素泊まり　約日幣 20,000～（約 NT$4,500）<br>
+                4人・2室・夕朝食付（オールインクルーシブ）　約日幣 57,000～（約 NT$12,800）<br>
+                <span style="color:var(--ink-light);font-size:11px">※ 尚未訂房　建議提早預訂，10月底旺季容易客滿</span>
+              </div>
+              <div class="tl-alert tl-alert-info" style="margin-top:8px">
+                💡 推薦理由：長濱唯一真正湖畔＋溫泉選擇。全室看得到琵琶湖，早晨湖景值回票價。オールインクルーシブ方案含夕食＋朝食 Buffet＋Lounge 免費飲酒（15:00～18:00），4人一起用餐不用再出門，長輩舒服。整趟只有這一晚住稍貴的旅館，算是值得。
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="tl-item">
         <div class="tl-spot">
           <div class="tl-time">18:30</div>
-          <div class="tl-name">晚餐：近江牛</div>
-          <div class="tl-note">壽喜燒或鐵板燒，滋賀名物</div>
+          <div class="tl-name">晚餐</div>
+          <div class="tl-note">
+            ✅ 若訂夕朝食付（オールインクルーシブ）方案 → 旅館內 Buffet，含近江牛・郷土料理・Lounge 飲料，4人不用出門<br>
+            🚶 若訂素泊まり／朝食付方案 → 步行約 10 分到長濱市區：推薦「翼果楼」（近江牛料理・鯖そうめん）或黑壁廣場附近餐廳
+          </div>
         </div>
       </div>
-      <div class="tl-tip">💡 Day 1 輕鬆安排，讓長輩好好調整時差</div>
+      <div class="tl-tip">💡 Day 1 輕鬆安排。晚餐在旅館解決，泡溫泉調時差。Day 2 早起看晨景，09:00 出發往伊賀剛好！</div>
     </div>
   </div>
 
@@ -336,51 +410,84 @@ footer{
       <div class="day-num">02</div>
       <div class="day-info">
         <div class="day-date">10/23 Friday</div>
-        <div class="day-title">琵琶湖 → 伊賀 → 松阪</div>
-        <div class="day-sub">開車約 2.5h（分段）</div>
+        <div class="day-title">琵琶湖 → 伊賀 → 伊勢</div>
+        <div class="day-sub">開車約 3h（分段）　路過松阪不停</div>
       </div>
       <div class="day-badge badge-rust">文化體驗</div>
     </div>
     <div class="timeline">
       <div class="tl-item">
         <div class="tl-spot">
+          <div class="tl-time">07:00</div>
+          <div class="tl-name">早起・湖畔晨景散步 🌅</div>
+          <div class="tl-note">旅館前琵琶湖畔，晨霧與湖面反光，十月底氣溫涼爽，長輩散步 30 分鐘最舒服</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
           <div class="tl-time">08:30</div>
-          <div class="tl-name">早餐後退房</div>
+          <div class="tl-name">早餐・退房</div>
+          <div class="tl-note">旅館早餐後退房，09:30 出發</div>
         </div>
       </div>
       <div class="tl-item">
-        <div class="tl-drive"><span class="drive-icon">🚗</span><span>開車往伊賀</span><span class="drive-dur">約 1.5h</span></div>
+        <div class="tl-drive"><span class="drive-icon">🚗</span><span>開車往伊賀（名阪国道）</span><span class="drive-dur">09:30 出發　約 1.5h</span></div>
       </div>
       <div class="tl-item">
         <div class="tl-spot">
-          <div class="tl-time">10:30</div>
+          <div class="tl-time">11:00</div>
           <div class="tl-name">伊賀流忍者博物館</div>
-          <div class="tl-note">開館 10:00｜忍者屋敷機關體驗＋忍術實演ショー（入場 800円＋ショー 500円）｜長輩對機關屋反應超好</div>
+          <div class="tl-note">開館 10:00｜忍者屋敷機關體驗＋忍術實演ショー（入場 800円＋ショー 500円）｜長輩對機關屋反應超好，約 1.5h</div>
         </div>
       </div>
       <div class="tl-item">
         <div class="tl-spot">
-          <div class="tl-time">12:00</div>
+          <div class="tl-time">12:30</div>
           <div class="tl-name">午餐：伊賀市區</div>
           <div class="tl-note">忍者主題餐廳或定食</div>
         </div>
       </div>
       <div class="tl-item">
-        <div class="tl-drive"><span class="drive-icon">🚗</span><span>開車往松阪</span><span class="drive-dur">約 1h</span></div>
+        <div class="tl-drive"><span class="drive-icon">🚗</span><span>開車往伊勢（伊勢自動車道，路過松阪）</span><span class="drive-dur">約 1.5h</span></div>
       </div>
       <div class="tl-item">
         <div class="tl-spot">
-          <div class="tl-time">16:00</div>
-          <div class="tl-name">Check in 松阪旅館</div>
+          <div class="tl-time">15:00</div>
+          <div class="tl-name">二見興玉神社・夫婦岩 🪨</div>
+          <div class="tl-note">兩塊巨岩以注連繩連結，伊勢神宮參拜前的禊（みそぎ）之地，傍晚光線最美，長輩平路散步約 30 分。伊勢市區開車約 15 分</div>
         </div>
       </div>
       <div class="tl-item">
         <div class="tl-spot">
-          <div class="tl-time">18:00</div>
+          <div class="tl-time">15:45</div>
+          <div class="tl-name">猿田彦神社</div>
+          <div class="tl-note">道開き之神，開運祈福，おかげ横丁步行 2 分，順路不繞路，約 20 分</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">16:30</div>
+          <div class="tl-name">Check in 伊勢旅館</div>
+          <div class="tl-note">建議住伊勢市區或內宮附近，步行可達おはらい町</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">17:30</div>
+          <div class="tl-name">おはらい町夕方散步</div>
+          <div class="tl-note">人潮稍退，傍晚燈光亮起，氣氛最好，買赤福・食べ歩き</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">19:00</div>
           <div class="tl-name">晚餐：松阪牛 🥩</div>
-          <div class="tl-note">推薦「和田金」或「松阪牛若松屋」，必點壽喜燒</div>
+          <div class="tl-note">
+            推薦「松阪まるよし伊勢おはらい町店」——就在おはらい町內，2樓可邊看街景邊吃，壽喜燒・焼肉・ステーキ都有，4人家族很合適。需提前訂位。
+          </div>
         </div>
       </div>
+      <div class="tl-tip">💡 今天路過松阪不停，松阪牛在伊勢吃！Day 3 早上輕鬆參拜神宮，不用趕</div>
     </div>
   </div>
 
@@ -390,8 +497,8 @@ footer{
       <div class="day-num">03</div>
       <div class="day-info">
         <div class="day-date">10/24 Saturday</div>
-        <div class="day-title">伊勢神宮 → 鳥羽水族館</div>
-        <div class="day-sub">開車約 40 分　景點密集充實</div>
+        <div class="day-title">伊勢神宮 → 朝熊山 → 鳥羽水族館</div>
+        <div class="day-sub">開車約 50 分　景點豐富充實</div>
       </div>
       <div class="day-badge badge-gold">神聖之地</div>
     </div>
@@ -400,7 +507,7 @@ footer{
         <div class="tl-spot">
           <div class="tl-time">08:00</div>
           <div class="tl-name">伊勢神宮・外宮</div>
-          <div class="tl-note">先拜外宮，人較少，步行平路約 45 分</div>
+          <div class="tl-note">先拜外宮，人較少，步行平路約 45 分。豐受大御神，掌管衣食住</div>
         </div>
       </div>
       <div class="tl-item">
@@ -410,40 +517,52 @@ footer{
         <div class="tl-spot">
           <div class="tl-time">09:30</div>
           <div class="tl-name">伊勢神宮・內宮</div>
-          <div class="tl-note">日本最高位神社，參道杉木林，平路好走，約 1.5h</div>
+          <div class="tl-note">日本最高位神社，天照大御神。宇治橋→參道杉木林，平路好走，約 1.5h｜十月底楓葉開始轉色</div>
         </div>
       </div>
       <div class="tl-item">
         <div class="tl-spot">
           <div class="tl-time">11:00</div>
-          <div class="tl-name">おかげ横丁</div>
-          <div class="tl-note">內宮旁老街：赤福麻糬・伊勢烏龍麵・醤油海老煎餅，約 1h</div>
+          <div class="tl-name">おかげ横丁・おはらい町</div>
+          <div class="tl-note">內宮旁老街：赤福麻糬・伊勢烏龍麵・醤油海老煎餅，食べ歩き，約 1h</div>
         </div>
       </div>
       <div class="tl-item">
         <div class="tl-spot">
           <div class="tl-time">12:30</div>
           <div class="tl-name">午餐：おかげ横丁</div>
+          <div class="tl-note">伊勢烏龍麵・手こね寿司・海鮮丼，輕食為主</div>
         </div>
       </div>
       <div class="tl-item">
-        <div class="tl-drive"><span class="drive-icon">🚗</span><span>開車往鳥羽</span><span class="drive-dur">約 30 分</span></div>
+        <div class="tl-drive"><span class="drive-icon">🚗</span><span>內宮 → 朝熊山頂展望台（朝熊岳道路，有料）</span><span class="drive-dur">約 20 分</span></div>
       </div>
       <div class="tl-item">
         <div class="tl-spot">
-          <div class="tl-time">14:00</div>
+          <div class="tl-time">13:30</div>
+          <div class="tl-name">朝熊山頂展望台 🏔️</div>
+          <div class="tl-note">開車直達山頂，俯瞰伊勢灣・鳥羽・志摩全景｜十月底天氣清澈視野最好｜長輩完全不用爬山，停車場旁就是展望台，約 30 分</div>
+          <div class="tl-alert tl-alert-info" style="margin-top:6px">朝熊岳道路為有料道路，普通車單程 930円，來回 1,570円（4人共同分擔）</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-drive"><span class="drive-icon">🚗</span><span>朝熊山 → 鳥羽水族館</span><span class="drive-dur">約 20 分（順路下山方向）</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">14:30</div>
           <div class="tl-name">鳥羽水族館 🦭</div>
-          <div class="tl-note">9:30～17:00（最終入館 16:00）｜日本唯一飼養儒艮｜ラッコ超可愛，約 2.5h</div>
+          <div class="tl-note">9:30～17:00（最終入館 16:00）｜日本唯一飼養儒艮｜ラッコ超可愛，約 2h</div>
         </div>
       </div>
       <div class="tl-item">
         <div class="tl-spot">
           <div class="tl-time">16:30</div>
           <div class="tl-name">Check in 鳥羽溫泉旅館</div>
-          <div class="tl-note">推薦海景旅館，品嚐伊勢海老・鮑魚料理</div>
+          <div class="tl-note">推薦海景溫泉旅館，品嚐伊勢海老・鮑魚料理</div>
         </div>
       </div>
-      <div class="tl-tip">💡 土曜日水族館人多，14:00 後入館可避開早上高峰</div>
+      <div class="tl-tip">💡 土曜日水族館人多，14:30 後入館可避開早上高峰。朝熊山下山方向剛好順路往鳥羽，不用繞路！</div>
     </div>
   </div>
 
