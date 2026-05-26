@@ -256,6 +256,64 @@ main{max-width:900px;margin:0 auto;padding:80px 48px 120px}
   display:flex;align-items:center;justify-content:center;
 }
 
+/* TABS */
+.tabs{display:flex;gap:0;border-bottom:2px solid var(--cream-dark);margin-bottom:32px}
+.tab-btn{
+  padding:12px 24px;font-size:13px;letter-spacing:1px;
+  font-family:'Noto Sans TC',sans-serif;font-weight:400;
+  background:none;border:none;cursor:pointer;
+  color:var(--ink-light);border-bottom:2px solid transparent;
+  margin-bottom:-2px;transition:color .2s,border-color .2s;
+}
+.tab-btn.active{color:var(--rust);border-bottom-color:var(--rust)}
+.tab-content{display:none}.tab-content.active{display:block}
+
+/* HOTEL TABLE */
+.hotel-table{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:24px}
+.hotel-table th{
+  text-align:left;padding:10px 14px;
+  font-size:11px;letter-spacing:2px;font-weight:500;
+  color:var(--ink-light);text-transform:uppercase;
+  border-bottom:2px solid var(--ink);white-space:nowrap;
+}
+.hotel-table td{
+  padding:14px 14px;border-bottom:1px solid var(--cream-dark);
+  color:var(--ink-mid);vertical-align:top;line-height:1.6;
+}
+.hotel-table td:first-child{font-weight:500;color:var(--ink);white-space:nowrap}
+.hotel-table tr:hover td{background:var(--cream)}
+.hotel-table tr:last-child td{border-bottom:none}
+.tag-onsen{
+  display:inline-block;font-size:10px;padding:2px 8px;
+  border-radius:100px;background:var(--teal-light);color:var(--teal);
+  font-weight:500;margin-left:6px;vertical-align:middle;
+}
+.tag-biz{
+  display:inline-block;font-size:10px;padding:2px 8px;
+  border-radius:100px;background:var(--cream-dark);color:var(--ink-mid);
+  font-weight:500;margin-left:6px;vertical-align:middle;
+}
+.tag-todo{
+  display:inline-block;font-size:10px;padding:2px 8px;
+  border-radius:100px;background:#fdf3e7;color:#7a4a10;
+  font-weight:500;
+}
+.budget-box{
+  background:var(--cream);border-radius:12px;
+  padding:20px 24px;margin-top:24px;
+}
+.budget-row{
+  display:flex;justify-content:space-between;align-items:baseline;
+  padding:8px 0;border-bottom:1px dashed var(--cream-dark);
+  font-size:13px;color:var(--ink-mid);
+}
+.budget-row:last-child{
+  border-bottom:none;padding-top:12px;margin-top:4px;
+  font-weight:500;color:var(--ink);font-size:15px;
+}
+.budget-val{color:var(--ink);font-weight:500}
+.budget-val.total{color:var(--rust);font-size:18px}
+
 /* FOOTER */
 footer{
   text-align:center;padding:48px 24px;
@@ -287,7 +345,7 @@ footer{
     <p class="hero-tag">Japan Travel　2026</p>
     <h1 class="hero-title">關西・三重<br><em>和歌山</em></h1>
     <div class="hero-meta">
-      <div class="hero-pill">📅 <span>10/22 – 10/29, 2026</span></div>
+      <div class="hero-pill">📅 <span>10/20 – 回程待定, 2026</span></div>
       <div class="hero-pill">🚗 <span>租車自駕</span></div>
       <div class="hero-pill">✈️ <span>關西機場（KIX）進出</span></div>
       <div class="hero-pill">👪 <span>帶長輩同行</span></div>
@@ -310,6 +368,7 @@ footer{
   <a class="nav-item" href="#day7">Day 7</a>
   <a class="nav-item" href="#day8">Day 8</a>
   <a class="nav-item" href="#summary">總覽</a>
+  <a class="nav-item" href="#hotels">🏨 住宿</a>
 </nav>
 
 <main>
@@ -323,9 +382,9 @@ footer{
     <div class="day-header">
       <div class="day-num">01</div>
       <div class="day-info">
-        <div class="day-date">10/22 Thursday</div>
+        <div class="day-date">10/20 Tuesday</div>
         <div class="day-title">關西機場 → 琵琶湖・長濱</div>
-        <div class="day-sub">CX564 桃園 11:08 → 關西 14:35　｜　開車約 1.5h</div>
+        <div class="day-sub">CX564 桃園 11:05 → 關西 13:50　｜　開車約 1.5h</div>
       </div>
       <div class="day-badge badge-teal">輕鬆抵達</div>
     </div>
@@ -392,7 +451,7 @@ footer{
       </div>
       <div class="tl-item">
         <div class="tl-spot">
-          <div class="tl-time">18:30</div>
+          <div class="tl-time">　TBD　</div>
           <div class="tl-name">晚餐</div>
           <div class="tl-note">
             ✅ 若訂夕朝食付（オールインクルーシブ）方案 → 旅館內 Buffet，含近江牛・郷土料理・Lounge 飲料，4人不用出門<br>
@@ -409,7 +468,7 @@ footer{
     <div class="day-header">
       <div class="day-num">02</div>
       <div class="day-info">
-        <div class="day-date">10/23 Friday</div>
+        <div class="day-date">10/21 Wednesday</div>
         <div class="day-title">琵琶湖 → 伊賀 → 伊勢</div>
         <div class="day-sub">開車約 3h（分段）　路過松阪不停</div>
       </div>
@@ -496,9 +555,9 @@ footer{
     <div class="day-header">
       <div class="day-num">03</div>
       <div class="day-info">
-        <div class="day-date">10/24 Saturday</div>
+        <div class="day-date">10/22 Thursday</div>
         <div class="day-title">伊勢神宮 → 朝熊山 → 鳥羽水族館</div>
-        <div class="day-sub">07:00 早出發！　伊勢→朝熊山→鳥羽　順路不繞路</div>
+        <div class="day-sub">07:00 早出發！　伊勢→朝熊山→鳥羽　順路不繞路（平日人少）</div>
       </div>
       <div class="day-badge badge-gold">神聖之地</div>
     </div>
@@ -595,7 +654,7 @@ footer{
     <div class="day-header">
       <div class="day-num">04</div>
       <div class="day-info">
-        <div class="day-date">10/25 Sunday</div>
+        <div class="day-date">10/23 Friday</div>
         <div class="day-title">賢島英虞灣 → 那智勝浦</div>
         <div class="day-sub">開車約 2.5h　今日移動距離最長</div>
       </div>
@@ -609,7 +668,11 @@ footer{
         <div class="tl-spot">
           <div class="tl-time">10:30</div>
           <div class="tl-name">賢島エスパーニャクルーズ ⛵</div>
-          <div class="tl-note">英虞灣遊覽船，班次每小時一班，10:30 出發最剛好，約 50 分｜真珠筏・里亞斯式海岸絕景</div>
+          <div class="tl-note">英虞灣遊覽船，約 50 分，不需預約，現場買票｜真珠筏・里亞斯式海岸絕景｜大人 1,900円（網路預購 1,800円）</div>
+          <div class="tl-alert tl-alert-info" style="margin-top:6px">
+            📅 10/23（四）出航時刻：09:30・<strong>10:30</strong>・11:30・13:30・14:30・15:30・16:30（12:30 班為週日祝日限定，本日無此班）<br>
+            ⚠️ 出航 15 分前までに乗り場へ。週日人多建議提早到！
+          </div>
         </div>
       </div>
       <div class="tl-item">
@@ -686,7 +749,7 @@ footer{
     <div class="day-header">
       <div class="day-num">05</div>
       <div class="day-info">
-        <div class="day-date">10/26 Monday</div>
+        <div class="day-date">10/24 Saturday</div>
         <div class="day-title">熊野古道大門坂 → 那智瀑布 → 白濱</div>
         <div class="day-sub">早出發！　開車約 2h</div>
       </div>
@@ -774,7 +837,7 @@ footer{
     <div class="day-header">
       <div class="day-num">06</div>
       <div class="day-info">
-        <div class="day-date">10/27 Tuesday</div>
+        <div class="day-date">10/25 Sunday</div>
         <div class="day-title">白濱一整天 🌊</div>
         <div class="day-sub">幾乎不開車　全程景點相距不超過 5km</div>
       </div>
@@ -844,7 +907,7 @@ footer{
     <div class="day-header">
       <div class="day-num">07</div>
       <div class="day-info">
-        <div class="day-date">10/28 Wednesday</div>
+        <div class="day-date">10/26 Monday</div>
         <div class="day-title">白濱 → 關西機場</div>
         <div class="day-sub">開車約 2h　輕鬆收尾</div>
       </div>
@@ -888,23 +951,24 @@ footer{
     <div class="day-header">
       <div class="day-num">08</div>
       <div class="day-info">
-        <div class="day-date">10/29 Thursday</div>
+        <div class="day-date">10/27 Tuesday</div>
         <div class="day-title">關西機場 → 桃園　回家！</div>
-        <div class="day-sub">國泰 CX565　關西 16:15 → 桃園 18:30</div>
+        <div class="day-sub">回程班機待定　觀望華航中</div>
       </div>
       <div class="day-badge badge-rust">旅程終點</div>
     </div>
     <div class="timeline">
       <div class="tl-item">
         <div class="tl-spot">
-          <div class="tl-time">16:15</div>
+          <div class="tl-time">TBD</div>
           <div class="tl-name">關西機場出發 ✈️</div>
-          <div class="tl-note">國泰航空 CX565</div>
+          <div class="tl-note">回程班機待定，觀望華航（CI）關西→桃園｜關西 T1 出發</div>
+          <div class="tl-alert tl-alert-warn" style="margin-top:6px">⚠️ 回程票尚未購買，確認日期後盡早購票。華航 CI756 等班次可查詢</div>
         </div>
       </div>
       <div class="tl-item">
         <div class="tl-spot">
-          <div class="tl-time">18:30</div>
+          <div class="tl-time">TBD</div>
           <div class="tl-name">桃園機場抵達 🏠</div>
           <div class="tl-note">滿載美好回憶，平安到家</div>
         </div>
@@ -920,20 +984,21 @@ footer{
         <tr><th>Day</th><th>路段</th><th>開車時間</th></tr>
       </thead>
       <tbody>
-        <tr><td>Day 1</td><td>關西機場 → 長濱</td><td>約 1.5h ✅</td></tr>
-        <tr><td>Day 2</td><td>長濱 → 伊賀 → 松阪</td><td>約 2.5h（分段）✅</td></tr>
-        <tr><td>Day 3</td><td>松阪 → 伊勢 → 鳥羽</td><td>約 40 分 ✅</td></tr>
-        <tr><td>Day 4</td><td>鳥羽 → 賢島 → 那智勝浦</td><td>約 3h（含停留）✅</td></tr>
-        <tr><td>Day 5</td><td>那智勝浦 → 鬼ヶ城 → 橋杭岩 → 白濱</td><td>約 2h ✅</td></tr>
-        <tr><td>Day 6</td><td>白濱市區內</td><td>幾乎不開車 ✅</td></tr>
-        <tr><td>Day 7</td><td>白濱 → 關西機場</td><td>約 2h ✅</td></tr>
+        <tr><td>Day 1　10/20</td><td>關西機場 → 長濱</td><td>約 1.5h ✅</td></tr>
+        <tr><td>Day 2　10/21</td><td>長濱 → 伊賀 → 伊勢</td><td>約 3h（分段）✅</td></tr>
+        <tr><td>Day 3　10/22</td><td>伊勢 → 朝熊山 → 鳥羽</td><td>約 50 分 ✅</td></tr>
+        <tr><td>Day 4　10/23</td><td>鳥羽 → 賢島 → 那智勝浦</td><td>約 3h（含停留）✅</td></tr>
+        <tr><td>Day 5　10/24</td><td>那智勝浦 → 鬼ヶ城 → 橋杭岩 → 白濱</td><td>約 2h ✅</td></tr>
+        <tr><td>Day 6　10/25</td><td>白濱市區內</td><td>幾乎不開車 ✅</td></tr>
+        <tr><td>Day 7　10/26</td><td>白濱 → 關西機場</td><td>約 2h ✅</td></tr>
+        <tr><td>Day 8　10/27</td><td>關西機場 → 桃園（待定）</td><td>回程觀望中</td></tr>
       </tbody>
     </table>
 
     <div class="summary-title" style="margin-top:48px">注意事項</div>
     <div class="notes-grid" style="margin-top:20px">
-      <div class="note-card"><strong>租車</strong>關西機場取還，建議含導航，提前預訂</div>
-      <div class="note-card"><strong>里程兌換</strong>國泰 CX564/CX565，Asia Miles 10,000 里／單程</div>
+      <div class="note-card"><strong>去程航班</strong>國泰 CX564　10/20（二）桃園 T1 11:05 → 關西 T1 13:50</div>
+      <div class="note-card"><strong>回程航班</strong>觀望中（傾向華航）｜日期未定｜關西 T1 出發</div>
       <div class="note-card"><strong>伊勢神宮</strong>外宮 → 內宮順序參拜為正式習慣</div>
       <div class="note-card"><strong>鳥羽水族館</strong>日本唯一儒艮，ラッコ需排隊，建議下午入場</div>
       <div class="note-card"><strong>大門坂</strong>長輩建議穿運動鞋，帶手杖更好</div>
@@ -943,6 +1008,96 @@ footer{
     </div>
   </div>
 </main>
+
+  <!-- HOTELS -->
+  <div class="summary" id="hotels" style="margin-top:80px">
+    <div class="summary-title">🏨 住宿總覽</div>
+    <p style="font-size:13px;color:var(--ink-light);margin-bottom:24px">策略：溫泉旅館精選 2 晚（鳥羽・白濱），其餘換商務旅館節省預算</p>
+
+    <table class="hotel-table">
+      <thead>
+        <tr>
+          <th>天數</th>
+          <th>地點</th>
+          <th>推薦旅館</th>
+          <th>類型</th>
+          <th>4人費用</th>
+          <th>狀態</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Day 1　10/20</td>
+          <td>長濱</td>
+          <td>ルートイン長浜インター<br><span style="font-size:11px;color:var(--ink-light)">人工溫泉大浴場・無料停車・朝食付</span></td>
+          <td><span class="tag-biz">商務</span></td>
+          <td style="color:var(--teal);font-weight:500">~NT$3,000</td>
+          <td><span class="tag-todo">尚未訂</span></td>
+        </tr>
+        <tr>
+          <td>Day 2　10/21</td>
+          <td>伊勢</td>
+          <td>ルートイン伊勢<br><span style="font-size:11px;color:var(--ink-light)">伊勢神宮まで車5分・無料停車・朝食付</span></td>
+          <td><span class="tag-biz">商務</span></td>
+          <td style="color:var(--teal);font-weight:500">~NT$3,000</td>
+          <td><span class="tag-todo">尚未訂</span></td>
+        </tr>
+        <tr style="background:var(--cream)">
+          <td>Day 3　10/22</td>
+          <td>鳥羽</td>
+          <td>浜辺の宿 ⭐<br><span style="font-size:11px;color:var(--ink-light)">全室海景・大浴場・部屋食・ファミリー大歓迎・夕食★4.6</span></td>
+          <td><span class="tag-onsen">♨ 溫泉</span></td>
+          <td style="color:var(--rust);font-weight:500">~NT$12,000～15,000</td>
+          <td><span class="tag-todo">尚未訂</span></td>
+        </tr>
+        <tr>
+          <td>Day 4　10/23</td>
+          <td>那智勝浦</td>
+          <td>ルートイン那智勝浦<br><span style="font-size:11px;color:var(--ink-light)">無料停車・大浴場・朝食付</span></td>
+          <td><span class="tag-biz">商務</span></td>
+          <td style="color:var(--teal);font-weight:500">~NT$3,500</td>
+          <td><span class="tag-todo">尚未訂</span></td>
+        </tr>
+        <tr style="background:var(--cream)">
+          <td>Day 5–6　10/24–25</td>
+          <td>白濱</td>
+          <td>白良浜海景溫泉旅館 ⭐<br><span style="font-size:11px;color:var(--ink-light)">白良浜直結・露天風呂・部屋食・崎の湯步行5分・連住2晚</span></td>
+          <td><span class="tag-onsen">♨ 溫泉</span></td>
+          <td style="color:var(--rust);font-weight:500">~NT$12,000～15,000／晚</td>
+          <td><span class="tag-todo">尚未訂</span></td>
+        </tr>
+        <tr>
+          <td>Day 7　10/26</td>
+          <td>關西機場周邊</td>
+          <td>ルートイン関西エアポート<br><span style="font-size:11px;color:var(--ink-light)">機場10分・無料停車・朝食付</span></td>
+          <td><span class="tag-biz">商務</span></td>
+          <td style="color:var(--teal);font-weight:500">~NT$3,000</td>
+          <td><span class="tag-todo">尚未訂</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="budget-box">
+      <div style="font-size:12px;letter-spacing:2px;color:var(--ink-light);margin-bottom:12px;text-transform:uppercase">住宿費用試算（7晚）</div>
+      <div class="budget-row">
+        <span>商務旅館 4晚（Day 1・2・4・7）</span>
+        <span class="budget-val">~NT$12,500</span>
+      </div>
+      <div class="budget-row">
+        <span>溫泉旅館 3晚（Day 3・5・6）</span>
+        <span class="budget-val">~NT$36,000～45,000</span>
+      </div>
+      <div class="budget-row">
+        <span style="font-weight:500">住宿合計（4人）</span>
+        <span class="budget-val total">~NT$48,500～57,500</span>
+      </div>
+      <div style="font-size:12px;color:var(--ink-light);margin-top:10px">※ 以上為含夕朝食方案估算｜實際依日期・方案而異｜建議提早預訂，10月底旺季</div>
+    </div>
+
+    <div class="tl-alert tl-alert-warn" style="margin-top:20px">
+      ⚠️ 預訂優先順序：白濱（連住2晚，最難訂）→ 鳥羽（週六，旺季）→ 其他商務旅館
+    </div>
+  </div>
 
 <footer>
   關西・三重・和歌山　2026年10月　8天7夜行程
