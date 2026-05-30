@@ -256,6 +256,32 @@ main{max-width:900px;margin:0 auto;padding:80px 48px 120px}
   display:flex;align-items:center;justify-content:center;
 }
 
+/* OPTIONAL / SPLIT TIMELINE */
+.tl-optional-wrap{margin:4px 0}
+.tl-optional-label{
+  font-size:11px;letter-spacing:2px;font-weight:500;
+  text-transform:uppercase;padding:6px 12px;
+  border-radius:100px;display:inline-block;margin-bottom:8px;
+}
+.label-skip{background:#fdf3e7;color:#7a4a10}
+.label-do{background:var(--teal-light);color:var(--teal)}
+.tl-split{
+  display:grid;grid-template-columns:1fr 1fr;gap:12px;
+  margin:8px 0;
+}
+.tl-split-col{
+  padding:12px 14px;border-radius:8px;
+  border:1px solid var(--cream-dark);
+  font-size:13px;
+}
+.tl-split-col.col-skip{background:#fdf3e7;border-color:#f0d5a0}
+.tl-split-col.col-do{background:var(--teal-light);border-color:var(--teal-light)}
+.tl-split-col .split-title{font-weight:500;margin-bottom:6px;font-size:12px}
+.tl-split-col.col-skip .split-title{color:#7a4a10}
+.tl-split-col.col-do .split-title{color:var(--teal)}
+.tl-split-col ul{margin:0;padding-left:16px;color:var(--ink-mid);line-height:1.8}
+@media(max-width:640px){.tl-split{grid-template-columns:1fr}}
+
 /* TABS */
 .tabs{display:flex;gap:0;border-bottom:2px solid var(--cream-dark);margin-bottom:32px}
 .tab-btn{
@@ -470,7 +496,7 @@ footer{
       <div class="day-info">
         <div class="day-date">10/21 Wednesday</div>
         <div class="day-title">琵琶湖 → 伊賀 → 伊勢</div>
-        <div class="day-sub">開車約 3h（分段）　路過松阪不停</div>
+        <div class="day-sub">開車約 3h（分段）　連住伊勢2晚</div>
       </div>
       <div class="day-badge badge-rust">文化體驗</div>
     </div>
@@ -550,16 +576,507 @@ footer{
     </div>
   </div>
 
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">16:30</div>
+          <div class="tl-name">Check in キャッスルイン伊勢（連住 2 晚）</div>
+          <div class="tl-note">外宮開車 6 分・內宮開車 11 分・無料停車場 140 台・12F 展望大浴場免費・ロビー免費咖啡・有免費送迎</div>
+          <div class="tl-alert tl-alert-info" style="margin-top:6px">💡 連住 2 晚不用搬行李，D3 早上 07:00 直接出發去外宮！</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">17:30</div>
+          <div class="tl-name">おはらい町夕方散步</div>
+          <div class="tl-note">傍晚燈光亮起，氣氛最好，買赤福・食べ歩き，約 1h</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">19:00</div>
+          <div class="tl-name">晚餐：松阪牛 🥩</div>
+          <div class="tl-note">松阪まるよし伊勢おはらい町店——就在おはらい町內 2 樓，壽喜燒・焼肉・ステーキ，邊看街景邊吃，需提前訂位</div>
+        </div>
+      </div>
+      <div class="tl-tip">💡 路過松阪不停，松阪牛在伊勢吃！連住 2 晚最省事</div>
+    </div>
+  </div>
+
   <!-- DAY 3 -->
   <div class="day" id="day3">
     <div class="day-header">
       <div class="day-num">03</div>
       <div class="day-info">
         <div class="day-date">10/22 Thursday</div>
-        <div class="day-title">伊勢神宮 → 朝熊山 → 鳥羽水族館</div>
-        <div class="day-sub">07:00 早出發！　伊勢→朝熊山→鳥羽　順路不繞路（平日人少）</div>
+        <div class="day-title">伊勢神宮 → 夫婦岩 → 伊勢散策</div>
+        <div class="day-sub">連住伊勢第 2 晚　今天不趕！</div>
       </div>
       <div class="day-badge badge-gold">神聖之地</div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">07:00</div>
+          <div class="tl-name">伊勢神宮・外宮 🌲</div>
+          <div class="tl-note">10月開門 05:00，07:00 人最少，晨光穿透杉木林最美｜豐受大御神，掌管衣食住，平路步行約 40 分</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-drive"><span class="drive-icon">🚗</span><span>外宮 → 內宮</span><span class="drive-dur">約 10 分</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">08:00</div>
+          <div class="tl-name">伊勢神宮・內宮</div>
+          <div class="tl-note">天照大御神，日本最高位神社｜宇治橋→參道杉木林，平路好走，約 1.5h｜早上人少最舒服</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">09:30</div>
+          <div class="tl-name">おかげ横丁・おはらい町</div>
+          <div class="tl-note">赤福麻糬・伊勢烏龍麵・醤油海老煎餅，食べ歩き早餐，約 1h</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-drive"><span class="drive-icon">🚗</span><span>內宮 → 夫婦岩</span><span class="drive-dur">約 15 分</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">11:00</div>
+          <div class="tl-name">二見興玉神社・夫婦岩 🪨</div>
+          <div class="tl-note">兩塊巨岩以注連繩連結，伊勢神宮參拜前的禊之地，傍晚光線最美，長輩平路散步約 30 分</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">11:45</div>
+          <div class="tl-name">猿田彦神社</div>
+          <div class="tl-note">道開き之神，開運祈福，おかげ横丁步行 2 分，順路不繞路，約 20 分</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">12:30</div>
+          <div class="tl-name">午餐：伊勢市區</div>
+          <div class="tl-note">手こね寿司・伊勢烏龍麵・海鮮丼，隨意選</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">14:00</div>
+          <div class="tl-name">下午自由時間・伊勢市區散策</div>
+          <div class="tl-note">おはらい町再逛一次・買伴手禮・咖啡廳休息，長輩慢慢走</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">16:00</div>
+          <div class="tl-name">旅館休息</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">18:30</div>
+          <div class="tl-name">晚餐：伊勢海老 🦐</div>
+          <div class="tl-note">伊勢市區伊勢海老専門店｜秋季（10月解禁）の伊勢海老は最高に美味！お造り・鬼殻焼き・みそ汁</div>
+        </div>
+      </div>
+      <div class="tl-tip">💡 今天節奏最慢，長輩最放鬆的一天。伊勢海老 10 月剛解禁，時機絕佳！</div>
+    </div>
+  </div>
+
+  <!-- DAY 4 -->
+  <div class="day" id="day4">
+    <div class="day-header">
+      <div class="day-num">04</div>
+      <div class="day-info">
+        <div class="day-date">10/23 Friday</div>
+        <div class="day-title">朝熊山 → 鳥羽水族館 → 志摩</div>
+        <div class="day-sub">伊勢→朝熊山→鳥羽→志摩　全程順路！</div>
+      </div>
+      <div class="day-badge badge-teal">精華之日</div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">07:00</div>
+          <div class="tl-name">退房・出發</div>
+          <div class="tl-note">キャッスルイン伊勢退房，行李放車上</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-drive"><span class="drive-icon">🚗</span><span>伊勢 → 伊勢志摩スカイライン（伊勢側入口）</span><span class="drive-dur">約 5 分</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">07:30</div>
+          <div class="tl-name">伊勢志摩スカイライン → 朝熊山頂展望台 🏔️</div>
+          <div class="tl-note">伊勢側入口進・鳥羽側出口出，完全順路不繞路｜沿途觀景點停拍照｜山頂俯瞰伊勢灣・鳥羽・志摩全景｜長輩開車直達不用爬山，約 30 分</div>
+          <div class="tl-alert tl-alert-info" style="margin-top:6px">💡「お伊勢参らば朝熊をかけよ」——參拜神宮後去朝熊山才算完整！有料道路來回 1,570円（4人分擔）</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-drive"><span class="drive-icon">🚗</span><span>朝熊山鳥羽側出口 → 鳥羽水族館</span><span class="drive-dur">約 15 分</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">09:30</div>
+          <div class="tl-name">鳥羽水族館 開館入場 🦭</div>
+          <div class="tl-note">9:30 開館直接進場！日本唯一飼養儒艮｜ラッコ超可愛｜4人票 11,200円｜慢慢逛足足 4.5 小時！</div>
+          <div class="tl-alert tl-alert-warn" style="margin-top:6px">💡 平日入場不用擔心人潮！ラッコ觀覽早點去佔位</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">12:30</div>
+          <div class="tl-name">鳥羽市區午餐（水族館途中外出）</div>
+          <div class="tl-note">當日再入館 OK！出去附近吃海鮮丼・伊勢海老ラーメン再回來</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">14:00</div>
+          <div class="tl-name">水族館繼續逛</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-drive"><span class="drive-icon">🚗</span><span>鳥羽 → 志摩賢島</span><span class="drive-dur">14:30 出發　約 40 分</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">15:15</div>
+          <div class="tl-name">Check in 賢島宝生苑 ⭐</div>
+          <div class="tl-note">英虞灣全景天然溫泉・自家源泉・全室露天風呂付・伊勢海老・鮑創作会席・賢島駅徒步 5 分・有停車場</div>
+          <div class="hotel-row">
+            <div class="hotel-card" style="border-color:var(--teal);grid-column:1/-1">
+              <div class="hotel-card-name">⭐ 賢島宝生苑（志摩溫泉旅館）</div>
+              <div class="hotel-card-detail">
+                英虞灣絕景・自家源泉天然溫泉・全室露天風呂付<br>
+                伊勢海老・鮑・創作会席・高評價<br>
+                賢島駅徒步 5 分・無料停車場
+              </div>
+              <div class="hotel-card-price">4人・夕朝食付　約 NT$18,000～24,000｜尚未訂房</div>
+            </div>
+          </div>
+          <div class="tl-alert tl-alert-warn" style="margin-top:8px">⚠️ 整趟最難訂！只住這一晚志摩溫泉，建議確定行程後立即預訂</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">18:00</div>
+          <div class="tl-name">晚餐：英虞灣眺望・鮑・伊勢海老会席 🦐</div>
+          <div class="tl-note">部屋食，望著英虞灣夕陽吃頂級会席，整趟行程最豪華的一晚</div>
+        </div>
+      </div>
+      <div class="tl-tip">💡 朝熊山→鳥羽水族館→志摩，全程順路不繞路，D4 是最充實的一天！</div>
+    </div>
+  </div>
+
+  <!-- DAY 5 -->
+  <div class="day" id="day5">
+    <div class="day-header">
+      <div class="day-num">05</div>
+      <div class="day-info">
+        <div class="day-date">10/24 Saturday</div>
+        <div class="day-title">志摩 → 那智勝浦</div>
+        <div class="day-sub">10:00 退房　途中尾鷲休息　開車約 3.5h</div>
+      </div>
+      <div class="day-badge badge-rust">南下移動</div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">10:00</div>
+          <div class="tl-name">志摩退房・出發</div>
+          <div class="tl-note">不用早起！享受早餐・溫泉・英虞灣早晨後從容退房</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-drive"><span class="drive-icon">🚗</span><span>志摩 → 尾鷲　約 1h</span><span class="drive-dur"></span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">11:00</div>
+          <div class="tl-name">尾鷲・道の駅 海山 休息</div>
+          <div class="tl-note">トイレ・コーヒー・輕食，国道42号沿い，約 30 分</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-drive"><span class="drive-icon">🚗</span><span>尾鷲 → 花の窟神社</span><span class="drive-dur">約 30 分</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">11:45</div>
+          <div class="tl-name">花の窟神社 + 七里御浜</div>
+          <div class="tl-note">45m 巨岩御神體・日本最古神社之一，停車場走幾步就到，約 15 分｜七里御浜世界遺産の砂礫海岸，車窓から眺める</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">12:15</div>
+          <div class="tl-name">午餐：道の駅 熊野・花の窟</div>
+          <div class="tl-note">みかんジュース工場直売・地元定食，隨意輕食</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-drive"><span class="drive-icon">🚗</span><span>花の窟 → 那智勝浦</span><span class="drive-dur">約 1h</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">13:30</div>
+          <div class="tl-name">那智勝浦 Check in ルートイン</div>
+          <div class="tl-note">ルートイン那智勝浦，無料停車場・大浴場・朝食付，早 check in 讓長輩休息</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">14:30</div>
+          <div class="tl-name">地元スーパー巡り 🛒</div>
+          <div class="tl-note">生鮪魚真空包・和歌山梅干・みかん加工品・鮪魚弁当，長輩買伴手禮最開心！</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">18:00</div>
+          <div class="tl-name">晚餐：那智勝浦 鮪魚 🐟</div>
+          <div class="tl-note">港附近海鮮食堂・居酒屋｜生まぐろ刺身・カマ焼き・鉄火丼｜お食事処 大和は昼のみ営業（明日昼に！）</div>
+        </div>
+      </div>
+      <div class="tl-tip">💡 10:00 從容退房，不用早起趕路。明天 D6 才是重頭戲！</div>
+    </div>
+  </div>
+
+  <!-- DAY 6 -->
+  <div class="day" id="day6">
+    <div class="day-header">
+      <div class="day-num">06</div>
+      <div class="day-info">
+        <div class="day-date">10/25 Sunday</div>
+        <div class="day-title">熊野古道 → 那智瀑布 → 崎の湯 → 大阪</div>
+        <div class="day-sub">行程精華！早出發，傍晚抵大阪</div>
+      </div>
+      <div class="day-badge badge-rust">行程精華</div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">08:00</div>
+          <div class="tl-name">退房出發</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-drive"><span class="drive-icon">🚗</span><span>那智勝浦 → 大門坂駐車場</span><span class="drive-dur">約 15 分</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">08:15</div>
+          <div class="tl-name">大門坂・熊野古道精華段 🌿</div>
+          <div class="tl-note">駐車場免費｜石板路 600m 杉木林 → 那智大社，緩坡，長輩 OK，上行約 30 分｜大門坂茶屋有免費杖出借</div>
+          <div class="tl-alert tl-alert-warn" style="margin-top:6px">⚠️ 長輩建議穿運動鞋，借杖同行！</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">08:50</div>
+          <div class="tl-name">熊野那智大社・青岸渡寺參拜</div>
+          <div class="tl-note">約 20 分，世界遺產，十月底楓葉開始轉色</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">09:15</div>
+          <div class="tl-name">那智瀑布（飛瀧神社）💧</div>
+          <div class="tl-note">日本落差最大瀑布 133m，拝所入場 300円，約 20 分</div>
+          <div class="tl-alert tl-alert-info" style="margin-top:6px">💡 下山路線：那智瀑布前バス停 → 大門坂駐車場，バス約 5 分・250円，不用走回頭路！長輩不需要爬下坡石階</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">10:00</div>
+          <div class="tl-name">お食事処 大和 早午餐 🐟</div>
+          <div class="tl-note">開店 11:00，先開車回那智勝浦等開店｜マグロ定食 1,600円（約NT$360）・大和丼 2,300円（約NT$517）・地元鮪魚名店！</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-drive"><span class="drive-icon">🚗</span><span>那智勝浦 → 鬼ヶ城</span><span class="drive-dur">約 40 分</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">12:30</div>
+          <div class="tl-name">鬼ヶ城</div>
+          <div class="tl-note">世界遺産海蝕洞窟，步道平緩，沿海岸約 30 分，長輩友善</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-drive"><span class="drive-icon">🚗</span><span>鬼ヶ城 → 橋杭岩</span><span class="drive-dur">約 30 分</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">13:30</div>
+          <div class="tl-name">橋杭岩</div>
+          <div class="tl-note">海中奇岩群，停車場旁直接觀賞，約 20 分，免費</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-drive"><span class="drive-icon">🚗</span><span>橋杭岩 → 白濱・崎の湯</span><span class="drive-dur">約 1h</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">14:45</div>
+          <div class="tl-name">崎の湯・露天溫泉 ♨️</div>
+          <div class="tl-note">開館 8:00～17:00，500円，太平洋就在眼前！不可使用洗髮精，泡約 45 分</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-drive"><span class="drive-icon">🚗</span><span>白浜駅 → トヨタレンタカー還車</span><span class="drive-dur">16:00　徒步 1 分</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-drive"><span class="drive-icon">🚃</span><span>JR くろしお特急　白浜 → 新大阪/天王寺</span><span class="drive-dur">約 2h　3,690円</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">18:30</div>
+          <div class="tl-name">大阪抵達・Check in Dormy Inn 🎉</div>
+          <div class="tl-note">ドーミーインPREMIUM大阪北浜｜天然溫泉「水都の湯」・サウナ・夜鳴きそば無料・北浜駅徒步1分</div>
+          <div class="hotel-row">
+            <div class="hotel-card" style="border-color:var(--teal);grid-column:1/-1">
+              <div class="hotel-card-name">⭐ ドーミーインPREMIUM大阪北浜</div>
+              <div class="hotel-card-detail">
+                天然溫泉「水都の湯」・サウナ付大浴場<br>
+                北浜駅徒步1分・夜鳴きそば無料・アイス無料<br>
+                牛鍋ご当地朝食・乳酸菌飲料無料
+              </div>
+              <div class="hotel-card-price">2室・素泊まり　約 NT$5,000～7,000｜尚未訂房</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">20:00</div>
+          <div class="tl-name">晚餐：難波・道頓堀 🎉</div>
+          <div class="tl-note">章魚燒・串炸・たこ焼き，最後大阪掃街！</div>
+        </div>
+      </div>
+      <div class="tl-tip">💡 熊野古道→崎の湯→大阪，一天精華全收！夜鳴きそば吃完倒頭就睡 😄</div>
+    </div>
+  </div>
+
+  <!-- DAY 7 -->
+  <div class="day" id="day7">
+    <div class="day-header">
+      <div class="day-num">07</div>
+      <div class="day-info">
+        <div class="day-date">10/26 Monday</div>
+        <div class="day-title">大阪散步 → 關西機場</div>
+        <div class="day-sub">輕鬆收尾・搭電車去機場</div>
+      </div>
+      <div class="day-badge badge-gold">返程準備</div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">08:00</div>
+          <div class="tl-name">Dormy Inn 朝食 + 大浴場朝風呂</div>
+          <div class="tl-note">ご当地朝食ビュッフェ・朝風呂でゆっくり</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">10:00</div>
+          <div class="tl-name">大阪最後伴手禮 🛍️</div>
+          <div class="tl-note">心齋橋・難波・黒門市場・ドンキホーテ薬妝掃貨</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">12:00</div>
+          <div class="tl-name">午餐：大阪最後一餐</div>
+          <div class="tl-note">串炸・お好み焼き・たこ焼き，隨便選都好吃</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-drive"><span class="drive-icon">🚃</span><span>難波 → 関西空港（南海ラピート特急）</span><span class="drive-dur">約 38 分　1,110円</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">14:00</div>
+          <div class="tl-name">關西機場・免稅店掃貨</div>
+          <div class="tl-note">視回程班機時間調整抵達機場時間</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">TBD</div>
+          <div class="tl-name">關西機場出發 ✈️</div>
+          <div class="tl-note">回程班機待定，觀望華航（CI）關西→桃園｜關西 T1 出發</div>
+          <div class="tl-alert tl-alert-warn" style="margin-top:6px">⚠️ 回程票尚未購買，確認後盡早購票</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 8 -->
+  <div class="day" id="day8">
+    <div class="day-header">
+      <div class="day-num">08</div>
+      <div class="day-info">
+        <div class="day-date">10/27 Tuesday</div>
+        <div class="day-title">關西機場 → 桃園　回家！</div>
+        <div class="day-sub">回程班機待定　觀望華航中</div>
+      </div>
+      <div class="day-badge badge-rust">旅程終點</div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">TBD</div>
+          <div class="tl-name">關西機場出發 ✈️</div>
+          <div class="tl-note">回程班機待定，觀望華航（CI）關西→桃園｜關西 T1 出發</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spot">
+          <div class="tl-time">TBD</div>
+          <div class="tl-name">桃園機場抵達 🏠</div>
+          <div class="tl-note">滿載美好回憶，平安到家</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="summary" id="summary">
+    <div class="summary-title">各日開車時間</div>
+    <table class="drive-table">
+      <thead>
+        <tr><th>Day</th><th>路段</th><th>開車時間</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Day 1　10/20</td><td>關西機場 → 長濱</td><td>約 1.5h ✅</td></tr>
+        <tr><td>Day 2　10/21</td><td>長濱 → 伊賀 → 伊勢</td><td>約 3h（分段）✅</td></tr>
+        <tr><td>Day 3　10/22</td><td>伊勢市區　夫婦岩</td><td>幾乎不開車 ✅</td></tr>
+        <tr><td>Day 4　10/23</td><td>伊勢 → 朝熊山 → 鳥羽 → 志摩</td><td>約 1.5h ✅</td></tr>
+        <tr><td>Day 5　10/24</td><td>志摩 → 尾鷲 → 花の窟 → 那智勝浦</td><td>約 3.5h（含休息）✅</td></tr>
+        <tr><td>Day 6　10/25</td><td>那智勝浦 → 鬼ヶ城 → 橋杭岩 → 白濱還車</td><td>約 2.5h ✅</td></tr>
+        <tr><td>Day 7　10/26</td><td>大阪市區（電車）→ 關西機場</td><td>不開車 ✅</td></tr>
+        <tr><td>Day 8　10/27</td><td>關西機場 → 桃園（待定）</td><td>回程觀望中</td></tr>
+      </tbody>
+    </table>
+
+    <div class="summary-title" style="margin-top:48px">注意事項</div>
+    <div class="notes-grid" style="margin-top:20px">
+      <div class="note-card"><strong>去程航班</strong>國泰 CX564　10/20（二）桃園 T1 11:05 → 關西 T1 13:50</div>
+      <div class="note-card"><strong>回程航班</strong>觀望中（傾向華航 CI）｜日期未定｜關西 T1 出發</div>
+      <div class="note-card"><strong>租車</strong>トヨタレンタカー　關西機場取車・白浜駅前還車（乗り捨て）｜預約備註「Apple CarPlay対応車希望」</div>
+      <div class="note-card"><strong>還車</strong>トヨタ白浜駅前店，JR白浜駅徒步1分，8:30～19:00｜乗り捨て料金約日幣 5,000～10,000</div>
+      <div class="note-card"><strong>伊勢神宮</strong>外宮 → 內宮順序參拜｜10月開門 05:00，07:00最舒服</div>
+      <div class="note-card"><strong>伊勢海老</strong>10月解禁，伊勢市區・志摩會席都吃得到，D3晚・D4晚各一次！</div>
+      <div class="note-card"><strong>鳥羽水族館</strong>9:30開館直接入場，平日人少，逛 4.5h！門票大人 2,800円</div>
+      <div class="note-card"><strong>大門坂</strong>長輩建議穿運動鞋，茶屋免費借杖｜下山搭バス回停車場 250円</div>
+      <div class="note-card"><strong>崎の湯</strong>不可使用洗髮精，溫泉水直接流入海中｜8:00～17:00，500円</div>
+      <div class="note-card"><strong>お食事処 大和</strong>D6 11:00開店，那智勝浦鮪魚名店，マグロ定食 1,600円</div>
     </div>
     <div class="timeline">
       <div class="tl-item">
@@ -649,333 +1166,6 @@ footer{
     </div>
   </div>
 
-  <!-- DAY 4 -->
-  <div class="day" id="day4">
-    <div class="day-header">
-      <div class="day-num">04</div>
-      <div class="day-info">
-        <div class="day-date">10/23 Friday</div>
-        <div class="day-title">賢島英虞灣 → 那智勝浦</div>
-        <div class="day-sub">開車約 2.5h　今日移動距離最長</div>
-      </div>
-      <div class="day-badge badge-teal">海灣巡遊</div>
-    </div>
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-drive"><span class="drive-icon">🚗</span><span>鳥羽 → 賢島</span><span class="drive-dur">約 40 分</span></div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-spot">
-          <div class="tl-time">10:30</div>
-          <div class="tl-name">賢島エスパーニャクルーズ ⛵</div>
-          <div class="tl-note">英虞灣遊覽船，約 50 分，不需預約，現場買票｜真珠筏・里亞斯式海岸絕景｜大人 1,900円（網路預購 1,800円）</div>
-          <div class="tl-alert tl-alert-info" style="margin-top:6px">
-            📅 10/23（四）出航時刻：09:30・<strong>10:30</strong>・11:30・13:30・14:30・15:30・16:30（12:30 班為週日祝日限定，本日無此班）<br>
-            ⚠️ 出航 15 分前までに乗り場へ。週日人多建議提早到！
-          </div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-spot">
-          <div class="tl-time">11:30</div>
-          <div class="tl-name">午餐：賢島附近</div>
-          <div class="tl-note">海鮮丼・志摩牡蠣</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-drive"><span class="drive-icon">🚗</span><span>賢島 → 那智勝浦（熊野尾鷲道路）</span><span class="drive-dur">約 2.5h</span></div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-spot">
-          <div class="tl-time">15:00</div>
-          <div class="tl-name">那智勝浦・Check in 溫泉旅館</div>
-          <div class="tl-note">4人和室＋大浴場＋夕食付，建議含晚餐方案，旅館鮪魚料理就很新鮮</div>
-          <div class="hotel-row">
-            <div class="hotel-card" style="border-color:var(--teal)">
-              <div class="hotel-card-name">⭐ 磯の宿 中錦（第一推薦）</div>
-              <div class="hotel-card-detail">
-                那智湾絕景・紀州備長炭の湯・海と山の厳選食材<br>
-                接客★5・清潔感★5・じゃらん高評價<br>
-                無料駐車場・那智の滝まで車15分
-              </div>
-              <div class="hotel-card-price">4人和室・夕朝食付　約 NT$12,000～15,000｜尚未訂房</div>
-            </div>
-            <div class="hotel-card">
-              <div class="hotel-card-name">ホテル&スパ中の島（備選・高級）</div>
-              <div class="hotel-card-detail">
-                小島上旅館，搭渡船入住・絕景露天風呂<br>
-                滿天星空＋海上日出・夕食★4.6<br>
-                ⚠️ 停車場在岸邊，需搭船過島
-              </div>
-              <div class="hotel-card-price">4人和室・夕朝食付　約 NT$18,000～22,000｜尚未訂房</div>
-            </div>
-          </div>
-          <div class="tl-alert tl-alert-info" style="margin-top:8px">💡 建議選含夕食方案，旅館鮪魚料理新鮮又不用出門。晚餐お食事処 大和留給明天早午餐！</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-spot">
-          <div class="tl-time">16:00</div>
-          <div class="tl-name">地元スーパー巡り 🛒</div>
-          <div class="tl-note">
-            那智勝浦のスーパーは2間，小鎮地方超市最有趣：<br>
-            ・生鮪魚真空包（超便宜，可帶回）<br>
-            ・和歌山梅干・梅酒（當地名產）<br>
-            ・地方醬料・みかん加工品<br>
-            ・鮪魚弁当（便宜又好吃）<br>
-            check in 後散步去逛，長輩買伴手禮最開心！
-          </div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-spot">
-          <div class="tl-time">18:00</div>
-          <div class="tl-name">晚餐：旅館鮪魚會席 🐟</div>
-          <div class="tl-note">
-            含夕食方案在旅館享用，新鮮鮪魚刺身・カマ焼き・那智湾海鮮，不用出門<br>
-            <br>
-            ✨ 明天早上 Day 5 朝市後：お食事処 大和（早午餐）<br>
-            　　マグロ定食 1,600円（約NT$360）・大和丼 2,300円（約NT$517）<br>
-            　　営業 11:00～15:30，週日OK，走路可達，超值！
-          </div>
-        </div>
-      </div>
-      <div class="tl-tip">💡 這天移動距離最長，早點 check in 休息。超市在旅館附近，傍晚去逛伴手禮最合適！</div>
-    </div>
-  </div>
-
-  <!-- DAY 5 -->
-  <div class="day" id="day5">
-    <div class="day-header">
-      <div class="day-num">05</div>
-      <div class="day-info">
-        <div class="day-date">10/24 Saturday</div>
-        <div class="day-title">熊野古道大門坂 → 那智瀑布 → 白濱</div>
-        <div class="day-sub">早出發！　開車約 2h</div>
-      </div>
-      <div class="day-badge badge-rust">行程精華</div>
-    </div>
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-spot">
-          <div class="tl-time">06:00</div>
-          <div class="tl-name">勝浦朝市（可選）</div>
-          <div class="tl-note">早市 6:00～12:00，旅館步行 5 分，新鮮海產伴手禮</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-drive"><span class="drive-icon">🚗</span><span>往大門坂駐車場（免費）</span><span class="drive-dur">約 15 分</span></div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-spot">
-          <div class="tl-time">08:00</div>
-          <div class="tl-name">大門坂・熊野古道精華段 🌿</div>
-          <div class="tl-note">石板路 600m 杉木林 → 那智大社｜約 270 段石階，緩坡，長輩 OK｜十月底晨光穿透杉林，絕美</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-spot">
-          <div class="tl-time">08:40</div>
-          <div class="tl-name">熊野那智大社參拜</div>
-          <div class="tl-note">約 20 分，十月底楓葉開始轉色</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-spot">
-          <div class="tl-time">09:10</div>
-          <div class="tl-name">那智瀑布（飛瀧神社）💧</div>
-          <div class="tl-note">日本落差最大瀑布 133m｜搭纜車下行，不需爬山｜拝所入場 300円</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-drive"><span class="drive-icon">🚗</span><span>往鬼ヶ城（国道 42 号）</span><span class="drive-dur">約 40 分</span></div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-spot">
-          <div class="tl-time">11:00</div>
-          <div class="tl-name">鬼ヶ城</div>
-          <div class="tl-note">世界遺產海蝕洞窟，步道平緩，沿海岸走約 30 分，長輩友善</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-spot">
-          <div class="tl-time">11:45</div>
-          <div class="tl-name">午餐：熊野市區或休息站</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-drive"><span class="drive-icon">🚗</span><span>往橋杭岩</span><span class="drive-dur">約 30 分</span></div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-spot">
-          <div class="tl-time">13:00</div>
-          <div class="tl-name">橋杭岩</div>
-          <div class="tl-note">海中奇岩群，停車場旁直接觀賞，約 20 分</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-drive"><span class="drive-icon">🚗</span><span>往白濱</span><span class="drive-dur">約 1h</span></div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-spot">
-          <div class="tl-time">14:30</div>
-          <div class="tl-name">Check in 白濱溫泉旅館・長輩午休</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-spot">
-          <div class="tl-time">18:00</div>
-          <div class="tl-name">晚餐：白濱海鮮</div>
-        </div>
-      </div>
-      <div class="tl-tip">💡 早出發！大門坂早上人少，杉木林晨光最美</div>
-    </div>
-  </div>
-
-  <!-- DAY 6 -->
-  <div class="day" id="day6">
-    <div class="day-header">
-      <div class="day-num">06</div>
-      <div class="day-info">
-        <div class="day-date">10/25 Sunday</div>
-        <div class="day-title">白濱一整天 🌊</div>
-        <div class="day-sub">幾乎不開車　全程景點相距不超過 5km</div>
-      </div>
-      <div class="day-badge badge-teal">最輕鬆</div>
-    </div>
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-spot">
-          <div class="tl-time">08:00</div>
-          <div class="tl-name">崎の湯・露天溫泉 ♨️</div>
-          <div class="tl-note">開館 8:00～17:00｜500円｜太平洋就在眼前，波浪聲中泡湯｜不可使用洗髮精（溫泉水直接流入海中）</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-spot">
-          <div class="tl-time">09:30</div>
-          <div class="tl-name">三段壁</div>
-          <div class="tl-note">高 50m 斷崖壯觀，可搭電梯下到洞窟（約 1,500円），停車免費，約 45 分</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-spot">
-          <div class="tl-time">10:30</div>
-          <div class="tl-name">千疊敷</div>
-          <div class="tl-note">廣大岩盤地形，完全平路可走到海邊，免費，約 30 分</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-spot">
-          <div class="tl-time">11:30</div>
-          <div class="tl-name">午餐：フィッシャーマンズワーフ白浜</div>
-          <div class="tl-note">海港市場餐廳，新鮮海產</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-spot">
-          <div class="tl-time">13:00</div>
-          <div class="tl-name">白良浜</div>
-          <div class="tl-note">純白沙灘 600m，十月天氣涼爽，裸足散步最舒服，約 1h</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-spot">
-          <div class="tl-time">14:30</div>
-          <div class="tl-name">とれとれ市場</div>
-          <div class="tl-note">南紀最大海鮮市場，採買伴手禮，約 1h</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-spot">
-          <div class="tl-time">16:00</div>
-          <div class="tl-name">旅館休息</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-spot">
-          <div class="tl-time">18:00</div>
-          <div class="tl-name">晚餐：旅館懷石或外出</div>
-        </div>
-      </div>
-      <div class="tl-tip">💡 長輩最享受的一天，節奏完全放鬆</div>
-    </div>
-  </div>
-
-  <!-- DAY 7 -->
-  <div class="day" id="day7">
-    <div class="day-header">
-      <div class="day-num">07</div>
-      <div class="day-info">
-        <div class="day-date">10/26 Monday</div>
-        <div class="day-title">白濱 → 關西機場</div>
-        <div class="day-sub">開車約 2h　輕鬆收尾</div>
-      </div>
-      <div class="day-badge badge-gold">返程準備</div>
-    </div>
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-spot">
-          <div class="tl-time">09:00</div>
-          <div class="tl-name">退房出發</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-drive"><span class="drive-icon">🚗</span><span>白濱 → 關西機場（阪和道）</span><span class="drive-dur">約 2h</span></div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-spot">
-          <div class="tl-time">12:00</div>
-          <div class="tl-name">還車・機場周邊</div>
-          <div class="tl-note">若明天早班機 → 住機場附近旅館　若時間充裕 → 大阪難波逛半天</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-spot">
-          <div class="tl-time">13:00</div>
-          <div class="tl-name">大阪午餐（若有時間）</div>
-          <div class="tl-note">難波章魚燒・串炸・最後的掃街</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-spot">
-          <div class="tl-time">18:00</div>
-          <div class="tl-name">Check in 機場附近旅館</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- DAY 8 -->
-  <div class="day" id="day8">
-    <div class="day-header">
-      <div class="day-num">08</div>
-      <div class="day-info">
-        <div class="day-date">10/27 Tuesday</div>
-        <div class="day-title">關西機場 → 桃園　回家！</div>
-        <div class="day-sub">回程班機待定　觀望華航中</div>
-      </div>
-      <div class="day-badge badge-rust">旅程終點</div>
-    </div>
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-spot">
-          <div class="tl-time">TBD</div>
-          <div class="tl-name">關西機場出發 ✈️</div>
-          <div class="tl-note">回程班機待定，觀望華航（CI）關西→桃園｜關西 T1 出發</div>
-          <div class="tl-alert tl-alert-warn" style="margin-top:6px">⚠️ 回程票尚未購買，確認日期後盡早購票。華航 CI756 等班次可查詢</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-spot">
-          <div class="tl-time">TBD</div>
-          <div class="tl-name">桃園機場抵達 🏠</div>
-          <div class="tl-note">滿載美好回憶，平安到家</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- SUMMARY -->
   <div class="summary" id="summary">
     <div class="summary-title">各日開車時間</div>
@@ -997,8 +1187,10 @@ footer{
 
     <div class="summary-title" style="margin-top:48px">注意事項</div>
     <div class="notes-grid" style="margin-top:20px">
+      <div class="note-card"><strong>租車</strong>トヨタレンタカー　關西機場取車・白浜駅前還車（乗り捨て）｜預約時備註「Apple CarPlay対応車希望」｜建議選ノア/ヴォクシー（2022年後）確保 CarPlay</div>
+      <div class="note-card"><strong>還車</strong>トヨタ白浜駅前店，JR白浜駅徒步1分，8:30～19:00｜乗り捨て料金約日幣 5,000～10,000</div>
       <div class="note-card"><strong>去程航班</strong>國泰 CX564　10/20（二）桃園 T1 11:05 → 關西 T1 13:50</div>
-      <div class="note-card"><strong>回程航班</strong>觀望中（傾向華航）｜日期未定｜關西 T1 出發</div>
+      <div class="note-card"><strong>回程航班</strong>觀望中（傾向華航 CI）｜日期未定｜關西 T1 出發</div>
       <div class="note-card"><strong>伊勢神宮</strong>外宮 → 內宮順序參拜為正式習慣</div>
       <div class="note-card"><strong>鳥羽水族館</strong>日本唯一儒艮，ラッコ需排隊，建議下午入場</div>
       <div class="note-card"><strong>大門坂</strong>長輩建議穿運動鞋，帶手杖更好</div>
@@ -1012,91 +1204,60 @@ footer{
   <!-- HOTELS -->
   <div class="summary" id="hotels" style="margin-top:80px">
     <div class="summary-title">🏨 住宿總覽</div>
-    <p style="font-size:13px;color:var(--ink-light);margin-bottom:24px">策略：溫泉旅館精選 2 晚（鳥羽・白濱），其餘換商務旅館節省預算</p>
-
+    <p style="font-size:13px;color:var(--ink-light);margin-bottom:24px">策略：溫泉旅館精選 2 晚（長濱・志摩），其餘商務旅館節省預算</p>
     <table class="hotel-table">
       <thead>
-        <tr>
-          <th>天數</th>
-          <th>地點</th>
-          <th>推薦旅館</th>
-          <th>類型</th>
-          <th>4人費用</th>
-          <th>狀態</th>
-        </tr>
+        <tr><th>天數</th><th>地點</th><th>推薦旅館</th><th>類型</th><th>4人費用</th><th>狀態</th></tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Day 1　10/20</td>
-          <td>長濱</td>
-          <td>ルートイン長浜インター<br><span style="font-size:11px;color:var(--ink-light)">人工溫泉大浴場・無料停車・朝食付</span></td>
-          <td><span class="tag-biz">商務</span></td>
-          <td style="color:var(--teal);font-weight:500">~NT$3,000</td>
+        <tr style="background:var(--cream)">
+          <td>Day 1　10/20</td><td>長濱</td>
+          <td>グランドメルキュール琵琶湖リゾート＆スパ ⭐<br><span style="font-size:11px;color:var(--ink-light)">全室琵琶湖景・太閤溫泉・夕朝食付・停車場有</span></td>
+          <td><span class="tag-onsen">♨ 溫泉</span></td>
+          <td style="color:var(--rust);font-weight:500">~NT$5,000～7,000</td>
           <td><span class="tag-todo">尚未訂</span></td>
         </tr>
         <tr>
-          <td>Day 2　10/21</td>
-          <td>伊勢</td>
-          <td>ルートイン伊勢<br><span style="font-size:11px;color:var(--ink-light)">伊勢神宮まで車5分・無料停車・朝食付</span></td>
+          <td>Day 2・3　10/21-22</td><td>伊勢</td>
+          <td>キャッスルイン伊勢（連住 2 晚）<br><span style="font-size:11px;color:var(--ink-light)">外宮開車6分・12F展望大浴場・無料停車140台・免費送迎</span></td>
           <td><span class="tag-biz">商務</span></td>
-          <td style="color:var(--teal);font-weight:500">~NT$3,000</td>
+          <td style="color:var(--teal);font-weight:500">~NT$4,000～5,000/晚</td>
           <td><span class="tag-todo">尚未訂</span></td>
         </tr>
         <tr style="background:var(--cream)">
-          <td>Day 3　10/22</td>
-          <td>鳥羽</td>
-          <td>浜辺の宿 ⭐<br><span style="font-size:11px;color:var(--ink-light)">全室海景・大浴場・部屋食・ファミリー大歓迎・夕食★4.6</span></td>
+          <td>Day 4　10/23</td><td>志摩・賢島</td>
+          <td>賢島宝生苑 ⭐<br><span style="font-size:11px;color:var(--ink-light)">英虞灣絕景・自家源泉・全室露天風呂付・伊勢海老鮑会席</span></td>
           <td><span class="tag-onsen">♨ 溫泉</span></td>
-          <td style="color:var(--rust);font-weight:500">~NT$12,000～15,000</td>
+          <td style="color:var(--rust);font-weight:500">~NT$18,000～24,000</td>
           <td><span class="tag-todo">尚未訂</span></td>
         </tr>
         <tr>
-          <td>Day 4　10/23</td>
-          <td>那智勝浦</td>
+          <td>Day 5　10/24</td><td>那智勝浦</td>
           <td>ルートイン那智勝浦<br><span style="font-size:11px;color:var(--ink-light)">無料停車・大浴場・朝食付</span></td>
           <td><span class="tag-biz">商務</span></td>
           <td style="color:var(--teal);font-weight:500">~NT$3,500</td>
           <td><span class="tag-todo">尚未訂</span></td>
         </tr>
         <tr style="background:var(--cream)">
-          <td>Day 5–6　10/24–25</td>
-          <td>白濱</td>
-          <td>白良浜海景溫泉旅館 ⭐<br><span style="font-size:11px;color:var(--ink-light)">白良浜直結・露天風呂・部屋食・崎の湯步行5分・連住2晚</span></td>
-          <td><span class="tag-onsen">♨ 溫泉</span></td>
-          <td style="color:var(--rust);font-weight:500">~NT$12,000～15,000／晚</td>
-          <td><span class="tag-todo">尚未訂</span></td>
-        </tr>
-        <tr>
-          <td>Day 7　10/26</td>
-          <td>關西機場周邊</td>
-          <td>ルートイン関西エアポート<br><span style="font-size:11px;color:var(--ink-light)">機場10分・無料停車・朝食付</span></td>
+          <td>Day 6　10/25</td><td>大阪</td>
+          <td>ドーミーインPREMIUM大阪北浜<br><span style="font-size:11px;color:var(--ink-light)">天然溫泉・サウナ・夜鳴きそば無料・北浜駅1分</span></td>
           <td><span class="tag-biz">商務</span></td>
-          <td style="color:var(--teal);font-weight:500">~NT$3,000</td>
+          <td style="color:var(--teal);font-weight:500">~NT$5,000～7,000</td>
           <td><span class="tag-todo">尚未訂</span></td>
         </tr>
       </tbody>
     </table>
-
     <div class="budget-box">
-      <div style="font-size:12px;letter-spacing:2px;color:var(--ink-light);margin-bottom:12px;text-transform:uppercase">住宿費用試算（7晚）</div>
-      <div class="budget-row">
-        <span>商務旅館 4晚（Day 1・2・4・7）</span>
-        <span class="budget-val">~NT$12,500</span>
-      </div>
-      <div class="budget-row">
-        <span>溫泉旅館 3晚（Day 3・5・6）</span>
-        <span class="budget-val">~NT$36,000～45,000</span>
-      </div>
-      <div class="budget-row">
-        <span style="font-weight:500">住宿合計（4人）</span>
-        <span class="budget-val total">~NT$48,500～57,500</span>
-      </div>
-      <div style="font-size:12px;color:var(--ink-light);margin-top:10px">※ 以上為含夕朝食方案估算｜實際依日期・方案而異｜建議提早預訂，10月底旺季</div>
+      <div style="font-size:12px;letter-spacing:2px;color:var(--ink-light);margin-bottom:12px;text-transform:uppercase">住宿費用試算（6晚）</div>
+      <div class="budget-row"><span>グランドメルキュール長濱 1晚</span><span class="budget-val">~NT$6,000</span></div>
+      <div class="budget-row"><span>キャッスルイン伊勢 2晚</span><span class="budget-val">~NT$9,000</span></div>
+      <div class="budget-row"><span>賢島宝生苑 1晚</span><span class="budget-val">~NT$21,000</span></div>
+      <div class="budget-row"><span>ルートイン那智勝浦 1晚</span><span class="budget-val">~NT$3,500</span></div>
+      <div class="budget-row"><span>Dormy Inn大阪 1晚</span><span class="budget-val">~NT$6,000</span></div>
+      <div class="budget-row"><span style="font-weight:500">住宿合計（4人）</span><span class="budget-val total">~NT$45,500</span></div>
+      <div style="font-size:12px;color:var(--ink-light);margin-top:10px">※ 含夕朝食方案估算｜實際依日期・方案而異</div>
     </div>
-
-    <div class="tl-alert tl-alert-warn" style="margin-top:20px">
-      ⚠️ 預訂優先順序：白濱（連住2晚，最難訂）→ 鳥羽（週六，旺季）→ 其他商務旅館
-    </div>
+    <div class="tl-alert tl-alert-warn" style="margin-top:20px">⚠️ 預訂優先順序：賢島宝生苑（最難訂）→ グランドメルキュール → その他</div>
   </div>
 
 <footer>
